@@ -77,7 +77,7 @@ form button {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  background-color: withite;
+  background: black;
 }
 
 .skip-link:focus {

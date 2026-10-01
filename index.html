@@ -70,24 +70,24 @@
 
 
       <!-- Information about the business owner -->
-      <section class="owner">
+      <section class="owner" itemprop="founder" itemscope itemtype="http://schema.org/Person">
 
         <h2>Meet the Owner</h2>
 
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
+          <li>Name: <span itemprop="name">John Doe</span></li>
+          <li>Title: <span itemprop="jobTitle">CEO</span></li>
 
           <li>
             Email:
-            <a href="mailto:johnjoe@jambox.ca">
+            <a itemprop="email" href="mailto:johnjoe@jambox.ca">
               johnjoe@jambox.ca
             </a>
           </li>
 
           <li>
             Phone:
-            <a href="tel:+16130000000">
+            <a itemprop="telephone" href="tel:+16130000000">
               613-000-0000
             </a>
           </li>
@@ -97,11 +97,10 @@
         <h3>Address</h3>
 
         <!-- Address is used for the business contact information -->
-        <address>
-          Jam Box Studios<br>
-          123 Guitar Road<br>
-          Musicville, Danceistan<br>
-          B3T 0L0
+        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">123 Guitar Road</span><br>
+          <span itemprop="addressLocality">Musicville</span>, <span itemprop="addressRegion">Danceistan</span><br>
+          <span itemprop="postalCode">B3T 0L0</span>
         </address>
 
       </section>
