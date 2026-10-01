@@ -1,3 +1,8 @@
+/******************************************************
+                    Base styles
+*******************************************************/
+
+/* I use Roboto for the main text because it is simple and easy to read. */
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: grey;
@@ -5,6 +10,7 @@ body {
   padding: 0;
 }
 
+/* I use a different font for the headings to separate them from the normal text. */
 h1,
 h2,
 h3,
@@ -14,16 +20,25 @@ h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
+/* I use a maximum width so the page does not get too wide on a large screen.
+Auto margins center the content. */
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+/* I make the image responsive so it stays inside the page. */
 img {
   width: 100%;
 }
 
+
+/******************************************************
+                    Navigation styles
+*******************************************************/
+
+/* I use flexbox to organize the navigation links in a row. */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -32,11 +47,13 @@ img {
   padding: 0;
 }
 
+/* I give the navigation items equal space and center the text. */
 .main-nav ul li {
   flex: 1;
   text-align: center;
 }
 
+/* I make the entire navigation link clickable and easier to read. */
 .main-nav ul li a {
   display: block;
   color: inherit;
@@ -44,6 +61,12 @@ img {
   font-size: 1.25rem;
 }
 
+
+/******************************************************
+                    Form styles
+*******************************************************/
+
+/* I make the form fields full width and add space between them. */
 form input,
 form textarea {
   display: block;
@@ -52,13 +75,14 @@ form textarea {
   padding: .5rem 1rem;
 }
 
+/* I give the message box enough space and let the user resize it vertically. */
 form textarea {
   min-height: 150px;
-  max-height: 150px;
   height: 150px;
-  resize: none;
+  resize: vertical;
 }
 
+/* I added a border and padding to make the button easier to see and use. */
 form button {
   background: none;
   border: 2px solid black;
@@ -66,10 +90,23 @@ form button {
   text-transform: uppercase;
 }
 
+
+/******************************************************
+                    Footer styles
+*******************************************************/
+
+/* I added space around the footer to separate it from the main content. */
 .site-footer {
   padding: 2rem 0;
 }
-/*      the skip link is hidden by default, but becomes visible when focused */
+
+
+/******************************************************
+                    Accessibility styles
+*******************************************************/
+
+/* I hide the skip link normally because it is mainly used
+when navigating the page with a keyboard. */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -78,10 +115,22 @@ form button {
   height: 1px;
   overflow: hidden;
   background: black;
+  color: white;
 }
 
+/* I make the skip link visible when the user reaches it with the keyboard. */
 .skip-link:focus {
   position: static;
   width: auto;
   height: auto;
+}
+
+/* I added a visible outline so keyboard users can see
+which element is currently selected. */
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid black;
+  outline-offset: 3px;
 }

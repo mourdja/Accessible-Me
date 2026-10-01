@@ -8,6 +8,7 @@
 
   <title>Accessible Me</title>
 
+  <!-- I use Google Fonts to improve the appearance and readability of the page. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -15,20 +16,23 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap"
     rel="stylesheet">
 
+  <!-- I connect my CSS file to style the page. -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-   <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- I added a skip link so keyboard users can go directly to the main content. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <div class="container">
 
-    <!-- Header contains the site name, navigation and banner -->
+    <!-- I use the header to contain the site name, navigation and banner. -->
     <header class="site-header">
 
       <h1>Jam Box Studios</h1>
 
-      <!-- Main navigation for the website -->
+      <!-- I added an ARIA label to make the main navigation easier to identify. -->
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#">Home</a></li>
@@ -38,7 +42,7 @@
         </ul>
       </nav>
 
-      <!-- The image has alternative text for accessibility -->
+      <!-- I added alternative text so screen reader users can understand the image. -->
       <img
         src="photo/html.jpg"
         class="banner"
@@ -47,9 +51,10 @@
     </header>
 
 
-    <!-- Main content of the page -->
+    <!-- I added an ID to the main content so the skip link has a destination. -->
     <main class="main-content" id="main-content">
 
+      <!-- This section contains the introduction to Jam Box Studios. -->
       <section>
         <h2>Welcome to Jam Box</h2>
 
@@ -69,17 +74,22 @@
       </section>
 
 
-      <!-- Information about the business owner -->
-      <section class="owner" itemprop="founder" itemscope itemtype="http://schema.org/Person">
+      <!-- I added Schema information to better identify the business owner. -->
+      <section class="owner"
+        itemprop="founder"
+        itemscope
+        itemtype="http://schema.org/Person">
 
         <h2>Meet the Owner</h2>
 
+        <!-- I use Schema properties to identify the owner's name and job title. -->
         <ul>
           <li>Name: <span itemprop="name">John Doe</span></li>
           <li>Title: <span itemprop="jobTitle">CEO</span></li>
 
           <li>
             Email:
+            <!-- I identify the email as part of the owner's contact information. -->
             <a itemprop="email" href="mailto:johnjoe@jambox.ca">
               johnjoe@jambox.ca
             </a>
@@ -87,6 +97,7 @@
 
           <li>
             Phone:
+            <!-- I identify the phone number and make it clickable. -->
             <a itemprop="telephone" href="tel:+16130000000">
               613-000-0000
             </a>
@@ -96,24 +107,31 @@
 
         <h3>Address</h3>
 
-        <!-- Address is used for the business contact information -->
-        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <!-- I use the address element and Schema properties to organize the business address. -->
+        <address
+          itemprop="address"
+          itemscope
+          itemtype="http://schema.org/PostalAddress">
+
           <span itemprop="streetAddress">123 Guitar Road</span><br>
-          <span itemprop="addressLocality">Musicville</span>, <span itemprop="addressRegion">Danceistan</span><br>
+
+          <span itemprop="addressLocality">Musicville</span>,
+          <span itemprop="addressRegion">Danceistan</span><br>
+
           <span itemprop="postalCode">B3T 0L0</span>
         </address>
 
       </section>
 
 
-      <!-- Contact section -->
+      <!-- This section contains the contact form. -->
       <section class="contact-section">
 
         <h2>Contact Us</h2>
 
         <form action="thanks.html" method="get">
 
-          <!-- Each label is connected to its input -->
+          <!-- I connected each label to its input to make the form more accessible. -->
 
           <label for="full-name">Full Name</label>
           <input
@@ -157,7 +175,7 @@
     </main>
 
 
-    <!-- Footer of the website -->
+    <!-- I use the footer for the copyright information of the website. -->
     <footer class="site-footer">
       &copy; 2021 Jam Box Studios
     </footer>
