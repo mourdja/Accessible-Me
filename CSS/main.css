@@ -101,7 +101,15 @@ form button {
   padding: 2rem 0;
 }
 
+/******************************************************
+                    Link styles
+*******************************************************/
 
+/* I use a darker color for links to make them easier to read
+against the background. */
+a {
+  color: #003366;
+}
 /******************************************************
                     Accessibility styles
 *******************************************************/
