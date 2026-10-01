@@ -69,3 +69,19 @@ form button {
 .site-footer {
   padding: 2rem 0;
 }
+/*      the skip link is hidden by default, but becomes visible when focused */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  background-color: withite;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
